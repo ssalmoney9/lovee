@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semangat Sayang! ❤️</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); /* Warna biru lembut yang menenangkan */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            max-width: 350px;
+            width: 85%;
+        }
+
+        .gif-container {
+            width: 100%;
+            height: 180px;
+            margin: 0 auto 20px;
+            border-radius: 15px;
+            overflow: hidden;
+            /* Gambar Kucing Lucu Semangat/Peluk */
+            background-image: url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcTMwdGg5c3Y2ZTMwZ3R4Z3Z4Z3Z4Z3Z4Z3Z4Z3Z4Z3Z4Z3Z4/3M4NpbLCTxBqU/giphy.gif'); 
+            background-size: cover;
+            background-position: center;
+        }
+
+        h1 {
+            color: #4a4a4a;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        button {
+            background-color: #6c5ce7; /* Warna ungu semangat */
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 16px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #5649c0;
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(108, 92, 231, 0.4);
+        }
+
+        #secret-message {
+            display: none;
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            animation: slideUp 0.8s ease;
+        }
+
+        .big-text {
+            font-size: 28px;
+            font-weight: 800;
+            color: #ff6b6b;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .sub-text {
+            font-size: 14px;
+            color: #888;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="gif-container"></div>
+        
+        <h1>Halo, Sayang...</h1>
+        
+        <p>
+            Kamu pasti lagi belajar ya?<br>
+            Atau baru pulang kerja?<br>
+            Pasti capek banget ya hari ini... 🥺
+        </p>
+
+        <button onclick="bukaPesan()">Klik buat isi tenaga 🔋</button>
+
+        <div id="secret-message">
+            <span class="big-text">SEMANGATTT!! 💪✨</span>
+            Istirahat dulu kalau capek.<br>
+            Aku bangga banget sama usaha kamu.<br><br>
+            <i>I Love You! ❤️</i>
+        </div>
+    </div>
+
+    <script>
+        function bukaPesan() {
+            var message = document.getElementById("secret-message");
+            var btn = document.querySelector("button");
+            
+            // Tampilkan pesan
+            message.style.display = "block";
+            
+            // Ubah teks tombol jadi 'Terkirim' (opsional) atau hilangkan
+            btn.style.display = "none";
+        }
+    </script>
+</body>
+</html>
